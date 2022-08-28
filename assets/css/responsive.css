@@ -1,0 +1,208 @@
+@media(max-width:1080px){
+    html {
+        font-size: 70%;
+    }
+    .sosmed {
+        margin: 20px 0;
+    }
+    .sosmed a {
+        width: 28px;
+        height: 28px;
+        margin: 6px 8px;
+    }
+    header {
+        width: 25rem;
+    }
+}
+
+@media(max-width:981px){
+    html {
+        font-size: 90%;
+    }
+    body{
+        padding: 1rem;
+    }
+    header {
+        left: -120%;
+        width: 25rem;
+        transition: all ease 1.7s;
+    }
+    .home p {
+        font-size: 1.2rem;
+        width: 90%;
+    }
+    #menu {
+        display: block;
+    }
+    header.toggle{
+        left: 0%;
+        transition: all ease 1.7s;
+    }
+    .slide-img {
+        height: 370px;
+    }
+    .portofolio hr {
+        margin-bottom: 11rem;
+    }
+}
+@media (max-width: 658px){
+    .introduce {
+        width: 100%;
+        font-size: 1.1rem;
+        display: flex;
+        text-align: justify;
+        flex-direction: column;
+    }
+    .introduce p {
+        margin: 10px 0;
+    }
+    .introduce p:nth-child(1) {
+        padding: 0;
+    }
+    .about-text .status {
+        margin-bottom: 25px;
+    }
+    .btn-info {
+        font-size: .9rem;
+        width: 170px;
+        margin: 0 10px;
+    }
+    .lang i {
+        font-size: 30px;
+        justify-content: center;
+        margin: 0 30px;    
+    }
+    
+    .contact .row .content {
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+    }
+    .contact .row form {
+        padding-top: .5rem;
+    }
+    .portofolio .box {
+        width: 410px;
+        height: 245px;
+    }
+}
+@media (max-width:558px) {
+    .portofolio .box span {
+        transform: rotateY(calc(var(--i) * 120deg)) translateZ(140px);
+    }
+}
+@media(max-width:455px){
+    html {
+        font-size: 95%;
+    }
+    .home p {
+        width: 100%;
+    }
+    header {
+        width: 100vw;
+    }
+    header .navbar ul li a {
+        padding: 0.7rem;
+    }
+    .about {
+        padding-top: 4rem;
+    }
+    .introduce {
+        width: 100%;
+        font-size: 1.1rem;
+        display: flex;
+        text-align: justify;
+        flex-direction: column;
+    }
+    .btn-info {
+        flex-flow: row;
+        margin: 0 5px;
+    }
+    .lang{
+    padding-top: 5rem;
+    }
+    .portofolio {
+    padding-top: 4rem;
+    }
+}
+@media(max-width:425px){
+    .btn-info {
+        font-size: .72rem;
+        width: 150px;
+        flex-direction: row;
+        margin: 0 3px;
+    }
+    .lang i {
+        font-size: 28px;
+        justify-content: center;
+        margin: 0 25px;    
+    }
+}
+@media(max-width:369px){
+    header .user img {
+        height: 8rem;
+        width: 8rem;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-top: .7rem;
+        margin-bottom: 0.8rem;
+        border: .3rem solid var(--blue);
+    }
+    header .user .name {
+        font-size: 1.2rem;
+    }
+    header .user .post {
+        font-size: .9rem;
+        margin-top: 5px;
+        color: var(--light);
+    }
+    header .navbar {
+        width: 105%;
+    }
+    header .navbar ul {
+        list-style: none;
+        padding: 0.1rem 3rem;
+    }
+    header .navbar ul li a {
+        display: block;
+        padding: 0.6rem;
+        margin: 1rem 0;
+        font-size: .8rem;
+        border-radius: 5rem;
+    }
+    .sosmed a{
+        width: 25px;
+        height: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 5px 15px;
+        border-radius: 50%;
+        color: white;
+    }
+
+    .btn-info {
+        font-size: .5rem;
+        width: 130px;
+        margin: 0 2px;
+    }
+    .lang i {
+        margin: 0 20px;    
+    }
+    .slide-img {
+        width: 100%;
+        height: 270px;
+    }
+    .my-slider {
+        padding-top: 85px;
+    }
+    .portofolio .box {
+        width: 350px;
+        height: 205px;
+    }
+    .portofolio .box span {
+        transform: rotateY(calc(var(--i) * 120deg)) translateZ(130px);
+    }
+    .portofolio hr {
+        margin-bottom: 9rem;
+    }
+}

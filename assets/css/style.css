@@ -1,0 +1,493 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400&display=swap');
+
+:root{
+    --dark: #000;
+    --dark1: #111;
+    --dark2: #1a1a1a;
+    --dark3: #262626;
+    --light: #fff;
+    --light1: #fafafa;
+    --light2: #d9d9d9;
+    --light3: #ccc;
+    --blue: #00bfff;
+}
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all  .2s linear;
+}
+html::-webkit-scrollbar{
+    width: .8rem;
+}
+html::-webkit-scrollbar-thumb{
+    background-color: var(--blue);
+}
+html{
+    font-size: 98%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+body{
+    background: var(--dark1);
+    overflow: hidden;
+    padding-left: 25rem;
+}
+section {
+    min-height: 100vh;
+    padding: 1.2rem;
+}
+hr {
+    width: 50%;
+    margin: 0 auto;
+}
+
+/* HEADER */
+header {
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 1000;
+    height: 100%;
+    width: 22rem;
+    background-color: var(--dark2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    text-align: center;
+}
+header .user img {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 1rem;
+    margin-bottom: 0.8rem;
+    border: .3rem solid var(--blue);
+}
+header .user .name {
+    font-size: 1.4rem;
+    color: var(--light);
+}
+header .user .post {
+    font-size: 1.1rem;
+    margin-top: 5px;
+    color: var(--light);
+}
+header .navbar {
+    width: 110%;
+}
+header .navbar ul {
+    list-style: none;
+    padding: 0.5rem 3rem;
+}
+header .navbar ul li a {
+    display: block;
+    padding: 0.6rem;
+    margin: 1rem 0;
+    background: var(--dark3);
+    color: var(--light);
+    font-size: 1rem;
+    border-radius: 5rem;
+}
+header .navbar ul li a:hover {
+    background: var(--blue);
+}
+
+.sosmed a{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 13px;
+    border-radius: 50%;
+    outline: 2px solid #666;
+    color: white;
+}
+.sosmed {
+    display: flex;
+    margin-right: 11px;
+}
+.sosmed i{
+    color: var(--light);
+}
+.sosmed:hover{
+    color: var(--dark1);
+}
+.icon:hover {
+    outline-offset: 4px;
+}
+.icon:hover i{
+    animation: shake .3s;
+}
+.icon--instagram:hover{
+    background-image: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+    outline-color: #a02d76;
+}
+.icon--linkedin:hover{
+    background-color: #0077b5;
+    outline-color: #0077b5;
+}
+.icon--github:hover{
+    background-color: #2ea44f;
+    outline-color: #2ea44f;
+}
+.icon--web:hover{
+    background-color: var(--blue);
+    outline-color: var(--blue);
+}
+@keyframes shake {
+    10%{transform: rotate(25deg);}
+    20%{transform: rotate(-25deg);}
+    30%{transform: rotate(25deg);}
+    40%{transform: rotate(-25deg);}
+}
+#menu {
+    position: fixed;
+    top: 2rem; right: 2rem;
+    background: var(--dark3);
+    color: var(--light);
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 0.75rem 1rem;
+    z-index: 1000;
+    display: none;
+}
+/* PEMBUKA LIGHT MODE-DARK MODE */
+*.light {
+    --light : var(--dark);
+    --dark1 : var(--light1);
+    --dark2 : var(--light2);
+    --dark3 : var(--light3);
+    transition: .3s ease-in;
+}
+.light-mode {
+    left: -8rem;
+}
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+.checkbox:checked + .label .ball {
+    transform: translateX(41px);
+}
+.label {
+    background-color: var(--dark1);
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid red; */
+    border-radius: 50px;
+    position: relative;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5px;
+    height: 26px;
+    width: 69px;
+    cursor: pointer;
+}
+.fa-moon{
+    color: #f1c40f;
+}
+.fa-sun {
+    color: #f39c12;
+}
+.ball {
+    background-color: var(--light);
+    border-radius: 50%;
+    position: absolute;
+    top: .3px;
+    left: -.4px;
+    height: 26px;
+    width: 28px;
+    transition: transform .3s linear;
+}
+/* PENUTUP LIGHT MODE-DARK MODE */
+
+/* PENUTUP HEADER */
+
+/* PEMBUKA HOME */
+.home {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+}
+.home h3 {
+    font-size: 1.6rem;
+    color: var(--light);
+}
+.home h1 {
+    font-size: 2.5rem;
+    color: var(--light);
+}
+.home p {
+    font-size: 1rem;
+    color: var(--light);
+    padding: 1rem 0;
+    text-align: justify;
+    width: 80%;
+}
+.home h1 span {
+    color: var(--blue);
+}
+.btn {
+    padding: .7rem 2rem;
+    background-color: var(--dark3);
+    color: var(--light);
+    border: none;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: .8rem;
+    border-radius: 50px;
+}
+.btn i {
+    padding-left: 5px;
+}
+.btn:hover {
+    background-color: var(--blue);
+    border: 1.5px solid var(--light);
+}
+/* PENUTUP HOME */
+/* PEMBUKA ABOUT*/
+.about{
+    display: flex;
+    text-align: center;
+    color: var(--light);
+    padding-top: 3rem;
+}
+.heading {
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.heading span {
+    margin-right: 5px;
+    font-size: 25px;
+    color: var(--blue);
+}
+.about-text .status {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 35px;
+	margin: 20px 0 30px 0;
+    text-align: start;
+}
+.about-text .status span {
+    color: var(--blue);
+}
+.introduce {
+    font-size: 1rem;
+    display: flex;
+    text-align: justify;
+    flex-direction: row;
+}
+.introduce p:nth-child(1) {
+    padding-right: 35px;
+}
+.download-cv{
+    padding-top: 35px;
+}
+.btn-info {
+    font-size: .9rem;
+    width: 180px;
+    margin: 0 15px;
+}
+.lang{
+    padding-top: 11rem;
+}
+.lang i {
+    font-size: 40px;
+    justify-content: center;
+    margin: 0 40px;    
+}
+.lang i:nth-child(1){
+    color: #E04F21;
+}
+.lang i:nth-child(2){
+    color: #1AA6D5;
+}
+.lang i:nth-child(3){
+    color: #EADD0D;
+}
+.lang i:nth-child(4){
+    color: var(--blue);
+}
+/* PENUTUP ABOUT SECTIONSECTION*/
+
+/* PEMBUKA SKILL SECTIONSECTION*/
+
+.container-skill {
+    padding-top: 30px;
+}
+.my-slider {
+    padding-top: 70px;
+}
+.slider-wrapper {
+    color: var(--light);
+    text-align: center;
+}
+.subcontainer-skill {
+    margin: auto;
+}
+.slide-img {
+    width: 95%;
+    height: 290px;
+    border-radius: 5px;
+    background-position: center;
+    background-size: cover;
+    border: 2px solid var(--light);
+    cursor: pointer;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+.slide h3 {
+    margin-top: 10px;
+}
+
+.img-1 {
+    background-image: url('../image/html.jpg');
+}
+.img-2 {
+    background-image: url('../image/css.jpg');
+}
+.img-3 {
+    background-image: url('../image/js.jpg');
+}
+.img-4 {
+    background-image: url('../image/bootstrap.png');
+}
+.img-5 {
+    background-image: url('../image/mysql.png');
+}
+.img-6 {
+    background-image: url('../image/excel.jpg');
+}
+.img-7 {
+    background-image: url('../image/word.jpg');
+}
+
+/* PENUTUP SKILL SECTION*/
+
+/* PEMBUKA PORTOFOLIO SECTION*/
+.portofolio {
+    color: var(--light);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 3.05rem;
+}
+.portofolio hr {
+    margin-bottom: 9.4rem;
+}
+.portofolio .box {
+    position: relative;
+    width: 475px;
+    height: 275px;
+    transform-style: preserve-3d;
+    animation: animate 20s linear infinite;
+}
+@keyframes animate {
+    0% {
+        transform: perspective(850px) rotateY(360deg);
+    }
+    100% {
+        transform: perspective(850px) rotateY(0deg);
+    }
+}
+.portofolio .box span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * 120deg)) translateZ(185px);
+    --webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #0004);
+}
+.portofolio .box span img {
+    position: absolute;
+    padding: 0 40px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 2s;
+}
+/* PENUTUP PORTOFOLIO */
+
+/* PEMBUKA CONTACT SECTION */
+
+.contact {
+    color: var(--light);
+    padding-top: 3.05rem;
+}
+
+.contact .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.contact .row .content {
+    flex:2 1 15rem;
+    padding-left: .5rem;
+    padding-bottom: 3rem;
+}
+.contact .row form {
+    flex:1 1 25rem;
+    padding: .5rem;
+    padding-top: 2rem;
+    margin: 1rem;
+    margin-bottom: 2rem;
+}
+.contact .row form .box{
+    padding: .7rem;
+    margin: .8rem 0;
+    background-color: var(--dark3);
+    color: var(--light);
+    text-transform: none;
+    font-size: 1rem;
+    width: 100%;
+}
+.contact .row form .box::placeholder{
+    text-transform: capitalize;
+}
+.contact .row form .message {
+    height: 8rem;
+    resize: none;
+}
+.contact .row .content .title{
+    text-transform: uppercase;
+    color: var(--light);
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+}
+.contact .row .content .info h3{
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    padding: .4rem 0;
+    font-weight: normal;
+    text-transform: none;
+}
+.contact .row .content .info h3 a {
+    color: var(--light);
+    text-transform: none;
+}
+.contact .row .content .info h3 i{
+    font-size: 1rem;
+    padding-right: .5rem;
+    color: var(--blue);
+}
+
+
+/* PENUTUP CONTACT SECTION */
