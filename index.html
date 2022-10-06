@@ -48,8 +48,8 @@
           <a href="https://github.com/bachtiarrafiqd" class="icon icon--github" target="_blank">
             <i class="fa-brands fa-github"></i>
           </a>
-          <a href="https://bachtiarrd-profile.web.app/" class="icon icon--web" target="_blank">
-            <i class="fas fa-external-link"></i>
+          <a href="https://drive.google.com/drive/folders/16AfFCTNMfesx4hoJmoTW5GxAGIBmFdPw?usp=sharing" class="icon icon--web" target="_blank">
+            <i class="fa-solid fa-award"></i>
           </a>
     </div>
   </header>
@@ -82,7 +82,7 @@
     </div>
     <div class="download-cv">
       <a href="#contact"><button class="btn btn-info"> contact <i class="fa-regular fa-envelope"></i></button></a>
-      <a href="https://drive.google.com/file/d/1Apz6PQmINtmJTO0VMGnmetwqCdl9dA3e/view?usp=sharing" target="_blank"><button class="btn btn-info"> Download CV <i class="fas fa-download"></i></button></a>
+      <a href="https://drive.google.com/file/d/1Gv1dP-kbILLlIqaYAZ6sbm_ZonvTj5m-/view?usp=sharing" target="_blank"><button class="btn btn-info"> Download CV <i class="fas fa-download"></i></button></a>
     </div>
     <div class="lang">
       <i class="fa-brands fa-html5"></i>
@@ -217,11 +217,11 @@
         </div>
       </div>
 
-      <form action="">
-        <input type="text" placeholder="name" class="box">
-        <input type="text" placeholder="email" class="box">
-        <input type="text" placeholder="subject" class="box">
-        <textarea name="" id="" cols="30" rows="10" class="box message" placeholder="message"></textarea>
+      <form onsubmit="formSubmit()">
+        <input type="text" placeholder="name" class="box" id="name" required>
+        <input type="text" placeholder="email" class="box" id="email" required>
+        <input type="text" placeholder="subject" class="box" id="subject">
+        <textarea name="" id="message" cols="30" rows="10" class="box message" placeholder="message"></textarea>
         <button type="submit" class="btn"> send <i class="fas fa-paper-plane"></i></button>
       </form>
 
@@ -244,6 +244,9 @@
     backSpeed: 55,
     loop : true
   });
+  function formSubmit (){
+    alert("Message sent succesfuly!");
+  }
 </script>
 </body>
 </html>

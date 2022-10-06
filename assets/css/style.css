@@ -165,6 +165,14 @@ header .navbar ul li a:hover {
     --dark3 : var(--light3);
     transition: .3s ease-in;
 }
+@keyframes rotate{
+    0% {
+        transform : rotate(0deg)
+    }
+    0% {
+        transform : rotate(360deg)
+    }
+}
 .light-mode {
     left: -8rem;
 }
@@ -203,7 +211,7 @@ header .navbar ul li a:hover {
     left: -.4px;
     height: 26px;
     width: 28px;
-    transition: transform .3s linear;
+    transition: transform .4s linear;
 }
 /* PENUTUP LIGHT MODE-DARK MODE */
 
@@ -478,6 +486,9 @@ header .navbar ul li a:hover {
     padding: .4rem 0;
     font-weight: normal;
     text-transform: none;
+}
+.contact .row .content .info a:hover{
+    color: var(--blue);
 }
 .contact .row .content .info h3 a {
     color: var(--light);

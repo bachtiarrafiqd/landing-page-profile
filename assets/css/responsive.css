@@ -205,4 +205,10 @@
     .portofolio hr {
         margin-bottom: 9rem;
     }
+    .contact .row form {
+        margin-left: 0;
+    }
+    .contact .row form .box{
+        width: 105%;
+    }
 }
